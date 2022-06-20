@@ -1,0 +1,94 @@
+<!-- <div align="center">
+    <br><br>
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <h2>Iniciar Sesión</h2>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <div align="center">
+            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p>¿No tienes una cuenta? <a class="link" routerLink="/register"> Registrate </a></p>
+         </div>
+         <button class="btn btn-info" type="submit" value="Enviar">Ingresar</button>
+        <button class="btn btn-primary" (click)="onClick()">Google</button>
+    </form>
+    <br>
+</div>
+ -->
+
+
+<body>
+    <div class="container-fluid w-75 bg-primary mt-3 rounded shadow" >
+        <div class="row align-items-stretch">
+        
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
+
+            </div>
+
+            <div class="col bg-white p-5 rounded-end">
+                <div class="text-end">
+                    <h1 class="fw-bold text-center py-5">Bienvenido</h1>
+
+                    <!-- LOGIN -->
+                    <form action="#" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+                        <div class="mb-15" class="text-left">
+                            <label for="email" class="form-label">Correo electronico</label>
+                            <input class="form-control" type="text" class="form-control" formControlName="email">
+                        </div>
+
+                        <br>
+
+                        <div class="mb-4" class="text-left">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" formControlName="password">
+                        </div>
+
+                        <br>
+
+                        <!--                         <div class="mb-4 form-check" class="text-left">
+                            <input type="checkbox" name="connected" class="form-check-input" id="">
+                            <label for="connected" class="form-check-laber">&nbsp;Mantenerme conectado</label>
+                        </div> -->
+
+                        <br>
+
+                        <div class="d-grid py-3">
+                            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        </div>
+
+                        <div class="my-3" class="text-center">
+                            <span align="center">¿Aún no tienes cuenta? <a routerLink="/register">Registrate</a></span>
+                        </div>
+                    </form>
+
+                    <!-- LOGIN CON GOOGLE -->
+
+                    <div class="container w-100 my-5">
+                        <div class="row text-center"><br>
+                            <div class="row py-3">
+                                <button class="btn btn-outline-danger w-100 my-1"  (click)="onClick()">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 d-none d-md-block">
+                                            <img src="../assets/images/google.svg" width="32" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-10 text-center">
+                                            Ingresar con Google
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <br>
+</body>
+
+
