@@ -3,6 +3,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 
+import 'sweetalert2/src/sweetalert2.scss'
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -28,10 +31,20 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.userService.register(this.formReg.value)
       .then(response => {
+        Swal.fire(
+          '¡Buen trabajo!',
+          'Registro exitoso',
+          'success'
+        )
         console.log(response);
         this.router.navigate(['/login']);
       })
-      .catch(error => console.log(error));
+      .catch(error => 
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Faltan por rellenar datos...',
+        }))
   }
 
 }

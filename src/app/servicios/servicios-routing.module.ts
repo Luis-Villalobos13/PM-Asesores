@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgendarCitaComponent } from './agendar-cita/agendar-cita.component';
-import { MensajesComponent } from './mensajes/mensajes.component';
+import { AgendarCitaComponent } from './pages/agendar-cita/agendar-cita.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MensajesComponent } from './pages/mensajes/mensajes.component';
 
 const routes: Routes = [  
   {
     path: '',
+    component: HomeComponent,
     children: [
       {
         path: 'agendar-cita',
-        component: AgendarCitaComponent 
+        component: AgendarCitaComponent
       },
       {
-        path: 'mensaje',
+        path: 'mensajes',
         component: MensajesComponent
       },
       {

@@ -1,0 +1,36 @@
+<mat-sidenav-container>
+    <mat-sidenav #menu>
+        <mat-toolbar>
+            <span>&nbsp;&nbsp;&nbsp;Menú&nbsp;&nbsp;&nbsp;</span>
+            <button mat-icon-button (click)="menu.toggle()">
+                <mat-icon mat-list-icon class="25">menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        <mat-nav-list>
+            <a (click)="menu.toggle()" mat-list-item routerLink="/servicios/agendar-cita">
+                <mat-icon mat-list-icon class="18"> edit_calendar </mat-icon> <span>&nbsp;Agendar Cita</span>
+            </a>
+            <a (click)="menu.toggle()" mat-list-item routerLink="/servicios/mensajes">
+                <mat-icon mat-list-icon class="18"> outgoing_mail </mat-icon> <span>&nbsp;Mensajes</span>
+            </a>
+<!--             <a (click)="menu.toggle()" mat-list-item routerLink="./lista">
+                <mat-icon mat-list-icon class="18"> list </mat-icon> <span> Lista Heroes </span>
+            </a>
+            <a (click)="menu.toggle()" mat-list-item routerLink="./editar/:id">
+                <mat-icon mat-list-icon class="18"> edit </mat-icon> <span> Editar Heroe </span>
+            </a> -->
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-toolbar>
+        <button mat-icon-button (click)="menu.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="space"></span>
+        <button routerLink="/inicio" (click)="logout()" mat-icon-button>
+            <mat-icon>logout</mat-icon>
+        </button>
+    </mat-toolbar>
+    <div class="contenedor">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>

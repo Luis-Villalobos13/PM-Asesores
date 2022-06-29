@@ -87,6 +87,11 @@ a.btn-cta {
     right: 10px;
 }
 
+.pasos {
+    width: 75px;
+    right: 50px;
+}
+
 .btn-inverse {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid transparent;
