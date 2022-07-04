@@ -6,6 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { InicioComponent } from './shared/inicio/inicio.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'inicio',
     component: InicioComponent
+  },
+  {
+    path: 'usuario',
+    component: UsuarioComponent, ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   {
     path: 'error-page',

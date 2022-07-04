@@ -13,7 +13,7 @@
             <a (click)="menu.toggle()" mat-list-item routerLink="/servicios/mensajes">
                 <mat-icon mat-list-icon class="18"> outgoing_mail </mat-icon> <span>&nbsp;Mensajes</span>
             </a>
-<!--             <a (click)="menu.toggle()" mat-list-item routerLink="./lista">
+            <!--             <a (click)="menu.toggle()" mat-list-item routerLink="./lista">
                 <mat-icon mat-list-icon class="18"> list </mat-icon> <span> Lista Heroes </span>
             </a>
             <a (click)="menu.toggle()" mat-list-item routerLink="./editar/:id">
@@ -26,6 +26,9 @@
             <mat-icon>menu</mat-icon>
         </button>
         <span class="space"></span>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default" routerLink="/usuario"><mat-icon>account_circle</mat-icon></button>
+        </div>
         <button routerLink="/inicio" (click)="logout()" mat-icon-button>
             <mat-icon>logout</mat-icon>
         </button>
