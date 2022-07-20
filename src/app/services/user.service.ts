@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, signInWithPopup, GoogleAuthProvider } from '@angular/fire/auth';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor(private auth: Auth) { }
+  constructor(
+    private auth: Auth,
+    ) { }
 
   register({ email, password }: any) {
     return createUserWithEmailAndPassword(this.auth, email, password);    
@@ -23,5 +26,4 @@ export class UserService {
   logout() {
     return signOut(this.auth);
   }
-
 }

@@ -39,12 +39,12 @@ export class RegisterComponent implements OnInit {
         console.log(response);
         this.router.navigate(['/login']);
       })
-      .catch(error => 
+      
+      .catch(error =>
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
           text: 'Faltan por rellenar datos...',
         }))
   }
-
 }
